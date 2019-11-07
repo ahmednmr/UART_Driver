@@ -17,6 +17,7 @@ void UART_SendChar(char data);
 char UART_getChar(void);
 void UART_SEND_string(char *array);
 void UART_SEND_number(int number);
+void UART_SEND_number_binary(int number);
 
 
 #endif /* UART_H_ */

@@ -66,4 +66,23 @@ void UART_SEND_number(int number)
 }
 
 
+void UART_SEND_number_binary(int number)
+{
+    char c=0,k=0;
+
+    for (c = 16; c > 0; c--)
+     {
+       k = number >> (c-1);
+
+       if (k & 1)
+    	   UART_SendChar('1');
+       else
+    	   UART_SendChar('0');
+
+     }
+
+
+}
+
+
 
